@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Image Upload</title>
+  
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Center the file input section */
+    body, html {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9; /* Light background color */
+    }
+
+    .container {
+      text-align: center;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    #previewContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .image-container {
+      position: relative;
+      display: inline-block;
+      margin: 10px;
+      border-radius: 8px;
+    }
+
+    .image-preview {
+      width: 150px;
+      height: auto;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    /* Highlight selected images */
+    .image-preview.selected {
+      border: 3px solid #007bff;
+    }
+
+    /* Style the delete button */
+    .delete-button {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background-color: red;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    /* Style the file input */
+    input[type="file"] {
+      padding: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Upload Images</h2>
+    
+    <!-- Image input with multiple attribute -->
+    <input type="file" id="imageInput" accept="image/jpeg" multiple />
+    
+    <!-- Preview area below the input field -->
+    <div id="previewContainer"></div>
+  </div>
+
+  <script>
+    // JavaScript to handle the image input
+    const imageInput = document.getElementById('imageInput');
+    const previewContainer = document.getElementById('previewContainer');
+
+    imageInput.addEventListener('change', function() {
+      const files = this.files;
+
+      // Loop through all selected files
+      for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+
+        // Ensure the file is a JPEG
+        if (file && file.type === 'image/jpeg') {
+          const reader = new FileReader();
+          
+          // When file is loaded, show the preview
+          reader.onload = function(e) {
+            const imgContainer = document.createElement('div');
+            imgContainer.classList.add('image-container');
+            
+            const imgElement = document.createElement('img');
+            imgElement.src = e.target.result;
+            imgElement.classList.add('image-preview');
+            imgContainer.appendChild(imgElement);
+
+            // Create a delete button
+            const deleteButton = document.createElement('button');
+            deleteButton.innerHTML = 'X';
+            deleteButton.classList.add('delete-button');
+            imgContainer.appendChild(deleteButton);
+
+            // Append image container to preview container
+            previewContainer.appendChild(imgContainer);
+
+            // Event listener to toggle image selection on click
+            imgElement.addEventListener('click', function() {
+              imgElement.classList.toggle('selected');
+            });
+
+            // Event listener for delete button
+            deleteButton.addEventListener('click', function() {
+              previewContainer.removeChild(imgContainer);
+            });
+          };
+          
+          // Read the file as Data URL (base64 encoded string)
+          reader.readAsDataURL(file);
+        } else {
+          alert('Please upload a valid JPEG image.');
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
