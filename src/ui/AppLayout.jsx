@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import Sidebar from "./Sidebar";
 // display: grid;
 //   // saying the first column should be 26rem and then the next one should be the rest of the page - 1 fractional unit (this is used to define the columns so this 26rem will be for the sidebar)
 //   grid-template-columns: 26rem 1fr;
@@ -7,9 +8,11 @@ import { Outlet } from "react-router-dom";
 //   height: 100vh;
 function AppLayout() {
   return (
-    <div className="grid-cols-2 grid-rows-2 auto h-max">
+    // <div className="grid-cols-2 grid-rows-2 auto h-max"> </div>
+    <>
+      <Sidebar />
       <Outlet />
-    </div>
+    </>
   );
 }
 
