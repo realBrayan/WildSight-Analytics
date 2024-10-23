@@ -1,0 +1,102 @@
+/* General container styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3e9d2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Leaderboard container */
+.leaderboard-container {
+    width: 65%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Leaderboard header styling */
+.leaderboard-header {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.leaderboard-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 1;
+    color: #333;
+}
+
+.trophy-icon {
+    font-size: 28px;
+    margin-right: 5px;
+    color: gold;
+}
+
+/* Leaderboard table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+}
+
+table td {
+    padding: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Styling each row */
+tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+/* Left section (icon and name) */
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.rank-icon {
+    margin-right: 15px;
+    font-size: 24px;
+}
+
+.user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid #ddd;
+}
+
+.user-name {
+    font-weight: 600;
+}
+
+/* Right section (uploads) */
+.upload-count {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .leaderboard-container {
+        width: 90%;
+    }
+}
