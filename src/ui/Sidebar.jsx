@@ -3,14 +3,14 @@ import { useState } from "react";
 import Logo from "./Logo";
 import MainNav from "./MainNav";
 
-export default function Sidebar() {
+export default function Sidebar({ expanded, setExpanded }) {
   // expand sidebar state
-  const [expanded, setExpanded] = useState(true);
+  // const [expanded, setExpanded] = useState(true);
   // 3 dot menu state
   const [menuVisible, setMenuVisible] = useState(false);
 
   return (
-    <aside className="h-screen w-48 fixed">
+    <aside className="h-screen min-w-[4.5rem] max-w-[18.5rem] fixed">
       <nav className="h-full inline-flex flex-col bg-white border-r shadow-sm">
         <div className="p-4 pb-2 flex justify-between items-center">
           {/* logo */}
@@ -29,7 +29,7 @@ export default function Sidebar() {
         <MainNav expanded={expanded} />
 
         {/* user profile */}
-        <div className="border-t flex p-3">
+        <div className="border-t flex py-3 px-4">
           <img
             src="https://ui-avatars.com/api/?background=c7d2fe&color=3730a3&bold=true"
             alt=""

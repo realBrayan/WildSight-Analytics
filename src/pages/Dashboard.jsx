@@ -1,5 +1,9 @@
 function Dashboard() {
-  return <></>;
+  return (
+    <>
+      <p>dashboared gang</p>
+    </>
+  );
 }
 
 export default Dashboard;
