@@ -1,5 +1,5 @@
 import { MoreVertical, ChevronLast, ChevronFirst } from "lucide-react";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Logo from "./Logo";
 import MainNav from "./MainNav";
 
@@ -9,8 +9,10 @@ export default function Sidebar({ expanded, setExpanded }) {
   // 3 dot menu state
   const [menuVisible, setMenuVisible] = useState(false);
 
+  // const { expanded, changeExpanded } = useContext(SidebarContext);
+
   return (
-    <aside className="h-screen min-w-[4.5rem] max-w-[18.5rem] fixed">
+    <aside className="h-screen min-w-[4.5rem] max-w-[18.5rem] fixed bg-blue-100">
       <nav className="h-full inline-flex flex-col bg-white border-r shadow-sm">
         <div className="p-4 pb-2 flex justify-between items-center">
           {/* logo */}

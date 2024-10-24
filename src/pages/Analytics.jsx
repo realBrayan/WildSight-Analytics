@@ -1,8 +1,8 @@
 import { LineGraph } from "../graphComponents/Line";
 import HeaderMessage from "../ui/HeaderMessage";
 
-
-{/*}
+{
+  /*}
 function Analytics() {
   return (
     <>
@@ -18,13 +18,16 @@ function Analytics() {
 }
 
 export default Analytics;
-*/}
+*/
+}
 
 export default function Example() {
   return (
     <div className="bg-gray-50 py-24 sm:py-32 lp-[48rem]">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-        <h2 className="text-center text-base/7 font-semibold text-indigo-600">WildSight Analytics</h2>
+        <h2 className="text-center text-base/7 font-semibold text-indigo-600">
+          WildSight Analytics
+        </h2>
         <p className="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">
           Invasive species in your area
         </p>
@@ -37,7 +40,8 @@ export default function Example() {
                   Mobile friendly
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                  You can upload pictures of invasive species and we will notify the local authorities.
+                  You can upload pictures of invasive species and we will notify
+                  the local authorities.
                 </p>
               </div>
               <div className="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
@@ -60,7 +64,8 @@ export default function Example() {
                   Reports in your Area
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                  People all around you are reporting invasive species. This helps protect native ecosystem and preserves biodiversity.
+                  People all around you are reporting invasive species. This
+                  helps protect native ecosystem and preserves biodiversity.
                 </p>
               </div>
               <div className="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
@@ -77,9 +82,12 @@ export default function Example() {
             <div className="absolute inset-px rounded-lg bg-white"></div>
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
               <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                <p className="mt-2 text-lg/7 font-medium tracking-tight text-gray-950 max-lg:text-center">Security</p>
+                <p className="mt-2 text-lg/7 font-medium tracking-tight text-gray-950 max-lg:text-center">
+                  Security
+                </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                  Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi.
+                  Morbi viverra dui mi arcu sed. Tellus semper adipiscing
+                  suspendisse semper morbi.
                 </p>
               </div>
               <div className="flex flex-1 items-center [container-type:inline-size] max-lg:py-6 lg:pb-2">
@@ -100,7 +108,8 @@ export default function Example() {
                   Powerful APIs
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                  Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget sem sodales gravida.
+                  Sit quis amet rutrum tellus ullamcorper ultricies libero dolor
+                  eget sem sodales gravida.
                 </p>
               </div>
               <div className="relative min-h-[30rem] w-full grow">
@@ -110,10 +119,14 @@ export default function Example() {
                       <div className="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white">
                         NotificationSetting.jsx
                       </div>
-                      <div className="border-r border-gray-600/10 px-4 py-2">App.jsx</div>
+                      <div className="border-r border-gray-600/10 px-4 py-2">
+                        App.jsx
+                      </div>
                     </div>
                   </div>
-                  <div className="px-6 pb-14 pt-6">{/* Your code example */}</div>
+                  <div className="px-6 pb-14 pt-6">
+                    {/* Your code example */}
+                  </div>
                 </div>
               </div>
             </div>
@@ -122,5 +135,5 @@ export default function Example() {
         </div>
       </div>
     </div>
-  )
+  );
 }
