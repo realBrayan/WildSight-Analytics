@@ -11,7 +11,7 @@ function AppLayout() {
       className={`grid grid-cols-[${expanded ? "18.5rem" : "4.5rem"}_1fr] grid-rows-[auto_1fr] h-screen`}
     >
       <Sidebar expanded={expanded} setExpanded={setExpanded} />
-      <div className="col-start-2 row-start-1 row-span-2 p-4">
+      <div className="col-start-2 row-start-1 row-span-2 px-10 py-4">
         <Outlet />
       </div>
     </div>
