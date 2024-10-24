@@ -8,7 +8,7 @@ function Analytics() {
         header={"Analytics"}
         description={"Analyze and predict movements"}
       />
-      <div className="">
+      <div>
         <LineGraph />
       </div>
     </>
