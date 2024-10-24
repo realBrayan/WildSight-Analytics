@@ -16,23 +16,32 @@ function MainNav({ expanded }) {
         icon={<LayoutDashboard />}
         size={20}
         text="Dashboard"
-        active
         expanded={expanded}
+        to="/dashboard"
       />
       {/* upload image */}
       <SidebarItem
         icon={<ImageUp />}
         size={20}
-        text="Upload Image"
+        text="Upload"
         expanded={expanded}
+        to="/uploadImage"
       />
       {/* map */}
-      <SidebarItem icon={<Map />} size={20} text="Map" expanded={expanded} />
+      <SidebarItem
+        icon={<Map />}
+        size={20}
+        text="Map"
+        expanded={expanded}
+        to="speciesMap"
+      />
+      {/* Database */}
       <SidebarItem
         icon={<Database />}
         size={20}
         text="Database"
         expanded={expanded}
+        to="/database"
       />
       {/* analytics */}
       <SidebarItem
@@ -40,6 +49,7 @@ function MainNav({ expanded }) {
         size={20}
         text="Analytics"
         expanded={expanded}
+        to="/analytics"
       />
       {/* medal */}
       <SidebarItem
@@ -47,6 +57,7 @@ function MainNav({ expanded }) {
         size={20}
         text="Leaderboard"
         expanded={expanded}
+        to="/leaderboard"
       />
       {/* settings */}
       <SidebarItem
@@ -54,6 +65,7 @@ function MainNav({ expanded }) {
         size={20}
         text="Settings"
         expanded={expanded}
+        to="/settings"
       />
     </nav>
   );

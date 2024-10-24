@@ -6,6 +6,8 @@ import MainNav from "./MainNav";
 export default function Sidebar() {
   // expand sidebar state
   const [expanded, setExpanded] = useState(true);
+  // 3 dot menu state
+  const [menuVisible, setMenuVisible] = useState(false);
 
   return (
     <aside className="h-screen w-48 fixed">
@@ -43,7 +45,24 @@ export default function Sidebar() {
               <h4 className="font-semibold">John Doe</h4>
               <span className="text-xs text-gray-600">johndoe@gmail.com</span>
             </div>
-            <MoreVertical size={20} />
+            {/* <MoreVertical size={20} /> */}
+            <button onClick={() => setMenuVisible((prev) => !prev)}>
+              <MoreVertical size={20} />
+            </button>
+
+            {/* Pop-up menu -> refactor to fix it and maybe remove the dots and add a log out button in the icons part. Also change to appear on hover or click somewhere else will get rid of the popup.*/}
+            {menuVisible && (
+              <div
+                className="absolute bottom-6 bg-white shadow-lg rounded-md p-2 w-20"
+                style={{ left: "16.75rem" }}
+              >
+                <ul>
+                  <button className="py-1 px-2 hover:bg-gray-100 cursor-pointer">
+                    Log out
+                  </button>
+                </ul>
+              </div>
+            )}
           </div>
         </div>
       </nav>
