@@ -11,7 +11,8 @@ function AppLayout() {
 
   return (
     <div
-      className={`grid grid-cols-[${expanded ? "18.5rem" : "4.5rem"}_1fr] h-screen`}
+      // ${expanded ? "18.5rem" : "4.5rem"}
+      className={`grid grid-cols-[18.5rem_1fr] h-screen`}
     >
       {/* NEED A DIV HERE WRAPPING THE SIDEBAR IN ORDER FOR GRID TO DETECT IT AS AN OBJECT.*/}
       <div>

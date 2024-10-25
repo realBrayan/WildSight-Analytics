@@ -1,6 +1,21 @@
+import { useState } from "react";
 import HeaderMessage from "../ui/HeaderMessage";
+import UploadingComponent from "../ui/UploadingComponent";
 
 function UploadImage() {
+  const [imageUrl, setImageUrl] = useState(null);
+
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImageUrl(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
   return (
     <>
       <HeaderMessage
@@ -17,14 +32,18 @@ function UploadImage() {
               type="file"
               name="bgfile"
               id="bgfile"
+              onChange={handleFileChange}
             />
             <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full m-auo flex items-center justify-center">
               <div className="space-y-6 text-center">
                 <img
-                  src="../public/images/file.png"
+                  src={
+                    "https://th.bing.com/th/id/OIP.NOPu8s1ThZRXw0FTylDuAgHaHa?w=170&h=180&c=7&r=0&o=5&pid=1.7"
+                  }
                   className="sm:w-40 w-32 m-auto"
-                  alt="illustration"
+                  alt="uploaded"
                 />
+
                 <p className="text-gray-700 text-lg">
                   Drag and drop a file or{" "}
                   <label
@@ -37,6 +56,16 @@ function UploadImage() {
                 </p>
               </div>
             </div>
+          </div>
+          <div className="flex flex-row py-8 items-center">
+            {imageUrl && (
+              <img
+                src={imageUrl}
+                className="sm:w-40 w-32 m-auto"
+                alt="uploaded"
+              />
+            )}
+            {imageUrl && <UploadingComponent />}
           </div>
         </div>
       </div>
