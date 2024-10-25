@@ -18,13 +18,24 @@ function UploadImage() {
 
   return (
     <>
-      <HeaderMessage
-        header={"Upload Image"}
-        description={"Report invasive species"}
-      />
-      <div>
+      <div className="flex items-center justify-center mt-10 mb-[10rem]">
+        {/* <HeaderMessage
+          header={"Upload Image"}
+          description={"Report invasive species"}
+          /> */}
+        <div>
+          <h2 className="text-center text-base/7 font-semibold text-indigo-600">
+            Upload Image
+          </h2>
+          <p className="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">
+            Report invasive species
+          </p>
+        </div>
+      </div>
+
+      <div className="flex justify-center items-center">
         <div className="m-auto px-6 sm:px-0 sm:w-8/12 md:w-7/12 lg:w-6/12 xl:w-4/12">
-          <div className="relative group w-full h-64 flex justify-center items-center">
+          <div className="relative group w-full h-80 flex justify-center items-center">
             <div className="absolute inset-0 w-full h-full rounded-xl bg-white bg-opacity-80 shadow-2xl backdrop-blur-xl group-hover:bg-opacity-70 group-hover:scale-110 transition duration-300"></div>
             <input
               accept=".jpg, .jpeg .png, .svg, .webp"
@@ -38,9 +49,10 @@ function UploadImage() {
               <div className="space-y-6 text-center">
                 <img
                   src={
-                    "https://th.bing.com/th/id/OIP.NOPu8s1ThZRXw0FTylDuAgHaHa?w=170&h=180&c=7&r=0&o=5&pid=1.7"
+                    "https://cdn3.iconfinder.com/data/icons/photo-tools/65/upload-1024.png"
+                    // "https://th.bing.com/th/id/OIP.NOPu8s1ThZRXw0FTylDuAgHaHa?w=170&h=180&c=7&r=0&o=5&pid=1.7"
                   }
-                  className="sm:w-40 w-32 m-auto bg-neutral-50 rounded-lg"
+                  className="sm:w-40 w-32 m-auto  rounded-lg"
                   alt="uploaded"
                 />
 

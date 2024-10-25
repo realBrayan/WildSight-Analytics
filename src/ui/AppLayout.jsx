@@ -12,14 +12,14 @@ function AppLayout() {
   return (
     <div
       // ${expanded ? "18.5rem" : "4.5rem"}
-      className={`grid grid-cols-[18.5rem_1fr] h-screen bg-wstan`}
+      className={`grid grid-cols-[18.5rem_1fr] h-screen bg-gray-50`}
     >
       {/* NEED A DIV HERE WRAPPING THE SIDEBAR IN ORDER FOR GRID TO DETECT IT AS AN OBJECT.*/}
       <div>
         <Sidebar expanded={expanded} setExpanded={setExpanded} />
       </div>
 
-      <div className="px-10 py-4 ">
+      <div className="px-10 py-4">
         <Outlet />
       </div>
     </div>

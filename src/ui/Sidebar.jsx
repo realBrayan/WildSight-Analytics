@@ -1,5 +1,5 @@
 import { MoreVertical, ChevronLast, ChevronFirst } from "lucide-react";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import Logo from "./Logo";
 import MainNav from "./MainNav";
 

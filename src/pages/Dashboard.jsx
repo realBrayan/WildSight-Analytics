@@ -1,29 +1,34 @@
-import HeaderMessage from "../ui/HeaderMessage";
+import { useNavigate } from "react-router-dom";
 import MiniMap from "../features/MapFeatures/MiniMap";
-import SpeciesMap from "./SpeciesMap";
+import HeaderMessage from "../ui/HeaderMessage";
+import Leaderboard from "./Leaderboard";
 
 function Dashboard() {
+  let navigate = useNavigate();
+
+  function onLeaderboardClick() {
+    navigate("/leaderboard");
+  }
+
   return (
     <>
       <HeaderMessage
-        textColor={"text-wsgreen"}
         header={"Welcome back, John!"}
         description={"Take a look at your dashboard"}
-        
       />
       <div className="grid grid-cols-3 gap-x-2 gap-y-2 grid-flow-row-dens">
-        <div className="bg-Amber rounded-lg shadow-xl min-h-[24rem] col-span-2 row-span-1 text-center ">
-          <MiniMap/>
+        <div className="rounded-lg shadow-xl min-h-[32rem] col-span-2 row-span-1 text-center ">
+          <MiniMap onClickRedirect={true} />
         </div>
-        <div className="bg-Amber rounded-lg shadow-xl min-h-[12rem] col-span-1 text-center">
-          leaderboard
+        <div
+          className="rounded-lg shadow-xl min-h-[12rem] col-span-1 text-center px-5 bg-wslightgreen"
+          onClick={onLeaderboardClick}
+        >
+          <Leaderboard />
         </div>
-        <div className="bg-Amber rounded-lg shadow-xl min-h-[12rem] col-span-2 text-center">
-
-        </div>
-        <div className="bg-Amber rounded-lg shadow-xl min-h-[12rem] col-span-1 text-center">
-          recent python sightings
-        </div>
+        {/* <div className="rounded-lg shadow-xl min-h-[12rem] col-span-1 text-center w-[30rem]">
+          <img src="https://media.istockphoto.com/id/500925165/photo/asian-python-in-river-in-nepal.jpg?s=612x612&w=0&k=20&c=wtx4osa_D07PK5Ue67wik3No7o9x6JOdiRnhLKJRNOo="></img>
+        </div> */}
       </div>
     </>
   );

@@ -33,7 +33,7 @@ function MainNav({ expanded }) {
         size={20}
         text="Map"
         expanded={expanded}
-        to="speciesMap"
+        to="/speciesMap"
       />
       {/* Database */}
       <SidebarItem
