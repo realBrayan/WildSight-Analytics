@@ -82,7 +82,7 @@ function SpeciesMap() {
           />
           <MapContainer
             center={position}
-            zoom={13}
+            zoom={7}
             scrollWheelZoom={false}
             className="h-full"
           >
