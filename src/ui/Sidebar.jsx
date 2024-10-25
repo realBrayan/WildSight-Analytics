@@ -12,7 +12,7 @@ export default function Sidebar({ expanded, setExpanded }) {
   // const { expanded, changeExpanded } = useContext(SidebarContext);
 
   return (
-    <aside className="h-screen min-w-[4.5rem] max-w-[18.5rem] fixed bg-blue-100">
+    <aside className="h-screen min-w-[4.5rem] max-w-[18.5rem] fixed ">
       <nav className="h-full inline-flex flex-col bg-white border-r shadow-sm">
         <div className="p-4 pb-2 flex justify-between items-center">
           {/* logo */}

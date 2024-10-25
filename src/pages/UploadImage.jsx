@@ -40,7 +40,7 @@ function UploadImage() {
                   src={
                     "https://th.bing.com/th/id/OIP.NOPu8s1ThZRXw0FTylDuAgHaHa?w=170&h=180&c=7&r=0&o=5&pid=1.7"
                   }
-                  className="sm:w-40 w-32 m-auto"
+                  className="sm:w-40 w-32 m-auto bg-neutral-50 rounded-lg"
                   alt="uploaded"
                 />
 
