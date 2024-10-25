@@ -105,11 +105,13 @@ function MiniMap({ onClickRedirect }) {
             {/* on click redirect handler for the map */}
             {onClickRedirect && <ClickRedirect />}
 
+            {/* show all the coordinates on the map */}
             {coordinates.map((coordinate, index) => {
               return (
                 <Marker
                   key={index}
                   position={[coordinate.latitude, coordinate.longitude]}
+                  opacity={`${index === 0 ? 1 : 0.6}`}
                 >
                   <Popup>
                     Python 1 <br /> {coordinate.latitude.toFixed(4)},{" "}
