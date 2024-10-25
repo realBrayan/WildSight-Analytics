@@ -21,7 +21,7 @@ function Dashboard() {
           <MiniMap onClickRedirect={true} />
         </div>
         <div
-          className="rounded-lg shadow-xl min-h-[12rem] col-span-1 text-center px-5 bg-wslightgreen"
+          className="rounded-lg shadow-xl min-h-[12rem] col-span-1 text-center px-5 bg-slate-300"
           onClick={onLeaderboardClick}
         >
           <Leaderboard />

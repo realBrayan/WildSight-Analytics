@@ -28,7 +28,15 @@ function UploadingComponent() {
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, []);
 
-  return <div className="text-gray-700 text-lg">{loadingMessage}</div>;
+  return (
+    <div className="text-gray-700 text-lg">
+      {loadingMessage}
+      <br />
+      {loadingMessage === "Invasive species confirmed✅"
+        ? "Added to map✅"
+        : ""}{" "}
+    </div>
+  );
 }
 
 export default UploadingComponent;

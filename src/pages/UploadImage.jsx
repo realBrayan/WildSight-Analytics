@@ -18,7 +18,7 @@ function UploadImage() {
 
   return (
     <>
-      <div className="flex items-center justify-center mt-10 mb-[10rem]">
+      <div className="flex items-center justify-center mt-24 mb-[6rem]">
         {/* <HeaderMessage
           header={"Upload Image"}
           description={"Report invasive species"}
@@ -46,13 +46,14 @@ function UploadImage() {
               onChange={handleFileChange}
             />
             <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full m-auo flex items-center justify-center">
-              <div className="space-y-6 text-center">
+              <div className="space-y-6 text-center w-full">
                 <img
                   src={
-                    "https://cdn3.iconfinder.com/data/icons/photo-tools/65/upload-1024.png"
-                    // "https://th.bing.com/th/id/OIP.NOPu8s1ThZRXw0FTylDuAgHaHa?w=170&h=180&c=7&r=0&o=5&pid=1.7"
+                    imageUrl
+                      ? imageUrl
+                      : "https://cdn3.iconfinder.com/data/icons/photo-tools/65/upload-1024.png"
                   }
-                  className="sm:w-40 w-32 m-auto  rounded-lg"
+                  className="sm:w-40 w-32 m-auto rounded-lg"
                   alt="uploaded"
                 />
 
@@ -66,19 +67,15 @@ function UploadImage() {
                     Upload a file
                   </label>{" "}
                 </p>
+
+                {/* image "api" stuff */}
+                {imageUrl && <UploadingComponent />}
               </div>
             </div>
           </div>
-          <div className="flex flex-row py-8 items-center">
-            {imageUrl && (
-              <img
-                src={imageUrl}
-                className="sm:w-40 w-32 m-auto"
-                alt="uploaded"
-              />
-            )}
+          {/* <div className="flex flex-row py-8 items-center">
             {imageUrl && <UploadingComponent />}
-          </div>
+          </div> */}
         </div>
       </div>
     </>

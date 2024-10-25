@@ -9,20 +9,16 @@ function Leaderboard() {
         description={"Compete to be the top uploader"}
       />
       <div>
-        {/* <h1>
-          <span>🏆</span> Leaderboard
-        </h1> */}
-
         <table className="w-max-full">
           <thead className="bg-gray-50 border-b-2 border-gray-200">
             <tr>
-              <th className="w-28 p-3 text-sm font-semibold tracking-wide text-left">
+              <th className="w-28 p-3 text-sm font-semibold tracking-wide text-center">
                 Place
               </th>
-              <th className="w-60 p-3 text-sm font-semibold tracking-wide text-left">
+              <th className="w-60 p-3 text-sm font-semibold tracking-wide text-center">
                 User
               </th>
-              <th className="w-28 p-3 text-sm font-semibold tracking-wide text-left">
+              <th className="w-28 p-3 text-sm font-semibold tracking-wide text-center">
                 Uploads
               </th>
             </tr>
@@ -30,30 +26,30 @@ function Leaderboard() {
 
           <tbody className="border">
             <LeaderboardEntry
-              bgColor="yellow-300"
+              bgColor="bg-yellow-200"
               place={1}
               name={"John Doe"}
               uploads={5000}
             />
 
             <LeaderboardEntry
-              bgColor="slate-700"
+              bgColor="bg-slate-200"
               place={2}
-              name={"Jane Doe"}
+              name={"Umang Vadhar"}
               uploads={58}
             />
 
             <LeaderboardEntry
-              bgColor="yellow-900"
+              bgColor="bg-orange-200"
               place={3}
-              name={"Jill Doe"}
+              name={"Ben Duong"}
               uploads={51}
             />
 
             <LeaderboardEntry
-              bgColor="neutral-50"
+              bgColor="bg-neutral-50"
               place={4}
-              name={"Jack Doe"}
+              name={"Derian Godoy Chavez"}
               uploads={1}
             />
           </tbody>
