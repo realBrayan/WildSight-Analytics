@@ -23,7 +23,7 @@ function UploadingComponent() {
 
       // to stop once all messages have been displayed - so only runs once
       if (runCount >= messages.length - 1) clearInterval(interval);
-    }, 1000);
+    }, 2500);
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, []);
